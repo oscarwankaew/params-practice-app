@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/home/:wildcard" => "params#hello"
+  get "/hello/:message" => "params#goodbye"
+  get "/numbers/:wildcard" => "params#number"
+  post "/home" => "params#create"
 end
